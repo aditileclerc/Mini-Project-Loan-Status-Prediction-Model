@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Eligibility Prediction</title>
+    <style>
+        body {
+            background-color: #e6e6fa;
+        }
+        
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: white; 
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            width: 300px;
+        }
+
+        label, input {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Loan Eligibility Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="gender">Gender:</label>
+        <input type="text" id="gender" name="Gender"><br><br>
+        
+        <label for="married">Married:</label>
+        <input type="text" id="married" name="Married"><br><br>
+        
+        <label for="dependents">Number of Dependents:</label>
+        <input type="number" id="dependents" name="Dependents"><br><br>
+        
+        <label for="education">Education:</label>
+        <input type="text" id="education" name="Education"><br><br>
+        
+        <label for="self_employed">Self Employed:</label>
+        <input type="text" id="self_employed" name="Self Employed"><br><br>
+        
+        <label for="applicant_income">Applicant Income:</label>
+        <input type="number" id="applicantincome" name="Applicant Income"><br><br>
+        
+        <label for="coapplicant_income">Coapplicant Income:</label>
+        <input type="number" id="coapplicantincome" name="Coapplicant Income"><br><br>
+        
+        <label for="loan_amount">Loan Amount:</label>
+        <input type="number" id="loanamount" name="Loan Amount"><br><br>
+        
+        <label for="loan_amount_term">Loan Amount Term:</label>
+        <input type="number" id="loan_amount_term" name="Loan Amount Term"><br><br>
+        
+        <label for="credit_history">Credit History:</label>
+        <input type="number" id="credit_history" name="Credit History"><br><br>
+        
+        <label for="property_area">Property Area:</label>
+        <input type="text" id="property_area" name="Property Area"><br><br>
+        
+        <input type="submit" value="Predict">
+    </form>
+    <!--{% if prediction is not none %}
+    <h2>Prediction: {% if prediction == 1 %} Eligible {% else %} Not Eligible {% endif %}</h2>
+    {% endif %}-->
+</body>
+</html>
